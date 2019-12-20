@@ -1,0 +1,108 @@
+/*
+Theme Name: ascii
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: Aaron Itzkovitz
+Author URI: http://wordpress.org/
+Description: ASCII Only
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: ascii
+Text Domain: ascii
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+html:not(#wpadminbar) {
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ascii-wrap {
+    display: inline-block;
+    width: auto;
+}
+
+.ascii-wrap::after {
+    content: "\a " attr(data-css-wrap);
+    white-space: pre;
+}
+
+.ascii-wrap::before {
+    content: attr(data-css-wrap) " \a";
+    white-space: pre;
+}
+
+.header-navigation-wrapper, nav, ul, li {
+    display:inline;
+}
+
+.header-menu::after {
+    content: "\a " attr(data-css-wrap);
+    white-space: pre;
+}
+
+.header-menu::before {
+    content: attr(data-css-wrap) " \a";
+    white-space: pre;
+}
+
+.header-menu {
+    padding-inline-start: 0px;
+}
+
+.header-title-wrapper {
+    width: auto;
+    display: inline-block;
+}   
+
+.header-inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu-item::after {
+    content: ' / ';
+}
+
+.menu-item:last-child::after{
+    content: none;
+}
+
+.end-header-ruler {
+    overflow-x: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+.welcome-banner {
+    font-style: normal;
+    margin: 0px;
+}
+
+.main-front-page {
+    margin-left: 20px;
+    margin-right: 20px;   
+}
+
+.site-footer {
+    margin-left: 20px;
+    margin-right: 20px;   
+    margin-top: 50px;
+    text-align: right;
+}
+
+.image-404 {
+    display:block;
+    line-height:8px; 
+    font-size: 8px; 
+    font-weight:bold;
+    white-space:pre;
+    font-family: monospace
+}
